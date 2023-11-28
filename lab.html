@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Задания, в которых необходимо использовать WHILE
+
+        //1. Вывести # столько раз, сколько указал пользователь.
+
+// let number = 0;
+// number = parseInt(prompt("введите количество:"));
+// while(i < number){
+// document.write("#");
+// i++;
+// }
+
+
+//2.Пользователь ввел число, а на экран вывелись все числа от введенного до 0.
+
+// let number = 0;
+// number = parseInt(prompt("введите число:"));
+// do{
+//     document.write(number);
+//     number--;
+// }while(number >= 0);
+
+
+//3.Запросить число и степень. Возвести число в указанную степень и вывести результат.
+// let number = 0;
+// let degree = 0;
+// number = parseInt(prompt("введите число: "));
+// degree = parseInt(prompt("введите степень: "));
+// document.write(number ** degree);
+
+
+
+//4.Запросить 2 числа и найти все общие делители.
+// let first = 0;
+// let second = 0;
+
+// first = parseInt(prompt("введите первое число: "));
+// second = parseInt(prompt("введите второе число: "));
+// let del = 1;
+// let min = 0;
+// if(first < second){
+//     min = second;
+// }
+// else{
+//     min = first;
+// }
+
+// while(del <= min){
+//     if(first % del === 0 && second % del === 0){
+//         document.write(del);
+//     }
+//     del++;
+// }
+
+
+//5. Посчитать факториал введенного пользователем числа.
+// let number = 0;
+// number = parseInt(prompt("введите число: "));
+// let result = 1;
+// let i = 1;
+// while(i <= number){
+//    result *= i;
+//    i++;
+// }
+// document.write(result);
+
+
+
+//Задания,в которых необходимо использовать DO WHILE.
+
+// 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех
+// пор, пока он не решит его правильно.
+
+// let answer = 6;
+// let userAnswer;
+// do{
+//     userAnswer = parseInt(prompt("реши пример 2 + 2 * 2: "));
+// }while(userAnswer != answer);
+// document.write("молодец");
+
+
+//2. Делить число 1000 на 2 до тех пор, пока не получится число меньше 50.
+// Вывести это число и сколько делений произвели.
+
+// let thousand = 1000;
+// let count = 0;
+// do{
+//     thousand /= 2;
+//     count++;
+// }while(thousand > 50);
+// document.write("число: " + thousand + "<br>");
+// document.write("количество делений: " + count);
+
+
+// ■ Задания, в которых необходимо использовать FOR.
+// 3. Вывести все числа от 1 до 100, которые кратные указанному
+// пользователем числу.
+
+// let number = 0;
+// number = parseInt(prompt("введите число: "));
+// for(let i = 0; i <= 100; i++){
+//     if(number % i == 0){
+//         document.write(i + "&nbsp;");
+//     }
+// }
+
+
+// 4. Вывести каждый 4-й элемент из указанного пользователем диапазона.
+//  Пользователь указывает минимальное и максимальное значения диапазона.
+// let min = 0;
+// let max = 0;
+
+// min = parseInt(prompt("введите минимальное значение диапазона: "));
+// max = parseInt(prompt("введите максимальное значение диапазона: "));
+// for(let i = min; i < max; i++){
+//     if(i % 4 == 0){
+// document.write(i + "&nbsp;");
+//     }
+// }
+
+
+// 5. Запросить число и проверить, простое ли оно.
+//  Простое число делится без остатка только на себя и на единицу.
+let number = 0;
+number = parseInt(prompt("введите число: "));
+
+let check = true;
+if(number <= 1){
+    check = false;
+}
+else{
+    for(let i = 2; i <= number / 2; i++){
+        if (number % i === 0) {
+            check = false;
+            break;
+        }
+    }
+}
+
+if(check){
+    document.write("число простое");
+}
+else{
+    document.write("число непростое..");
+}
+    </script>
+</body>
+</html>
